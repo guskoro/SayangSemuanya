@@ -47,10 +47,7 @@ extension ListFoodViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("pressed")
-//        let controller = FoodDetailViewController.instantiate()
-//        navigationController?.pushViewController(controller, animated: true)
         let controller = storyboard? .instantiateViewController(withIdentifier: "FoodDetailViewController") as! UIViewController; controller.modalPresentationStyle = .fullScreen
                     present(controller, animated: true, completion: nil)
-        //controller.food = foods[indexPath.row].self
     }
 }

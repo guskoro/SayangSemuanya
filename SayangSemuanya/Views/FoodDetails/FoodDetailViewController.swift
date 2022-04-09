@@ -16,6 +16,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var price: UIButton!
     
+    @IBOutlet var backButton: UIBarButtonItem!
     
     
     
@@ -27,6 +28,7 @@ class FoodDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // set detail (tp blm berhasil)
     private func detail(){
         imageDetail.image = food.image
         titleLabel.text = food.name
@@ -34,9 +36,17 @@ class FoodDetailViewController: UIViewController {
         price.setTitle(food.price, for: .normal)
     }
     
+    // pindah page
+    @IBAction func didBack(_ sender: Any) {
+            let controller = storyboard? .instantiateViewController(withIdentifier: "ListFoodViewController") as! UIViewController; controller.modalPresentationStyle = .fullScreen
+                        present(controller, animated: true, completion: nil)
+    }
+    
+    
+    
+    // change wishlist Logo
     @IBAction func wishList(_ sender: Any) {
         if cek == false {
-//            print("change")
             cek = true
             wishList.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
