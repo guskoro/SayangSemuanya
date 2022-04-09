@@ -21,7 +21,7 @@ class FoodListTableViewCell: UITableViewCell {
     func setup(food: Food) {
         titleLabel.text = food.name
         descriptionLabel.text = food.description
-        foodImageView.image = #imageLiteral(resourceName: "foodList")
+        foodImageView.image = food.image
     }
     
     @IBAction func buttonClicked(_ sender: Any) {
