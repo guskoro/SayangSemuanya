@@ -54,6 +54,6 @@ extension ListFoodViewController: UITableViewDelegate, UITableViewDataSource {
         //navigationController?.pushViewController(controller, animated: true)
         //navigationController?.present(controller, animated: true, completion: nil)
         let controller = storyboard? .instantiateViewController(withIdentifier: "FoodDetailViewController") as! UIViewController; controller.modalPresentationStyle = .fullScreen
-                    present(controller, animated: true, completion: nil)
+                    present(controller, animated: false, completion: nil)
     }
 }
