@@ -9,29 +9,13 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
 
-    var food: Food!
     @IBOutlet var wishList: UIButton!
-    @IBOutlet var imageDetail: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var price: UIButton!
-    
-    
-    
-    
     var cek = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    private func detail(){
-        imageDetail.image = food.image
-        titleLabel.text = food.name
-        descriptionLabel.text = food.description
-        price.setTitle(food.price, for: .normal)
     }
     
     @IBAction func wishList(_ sender: Any) {

@@ -12,14 +12,17 @@ class ListFoodViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var foods: [Food] = [
-        .init(id: "1", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "2", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "3", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "4", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "5", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "6", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "7", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList")),
-        .init(id: "8", name: "Sate Ayam", description: "Sate Ayam", price: "5000", image: #imageLiteral(resourceName: "foodList"))
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000),
+        .init(id: "id1", name: "Sate Ayam", description: "Sate ayam blablablablbablbablab  ahabjbajba", price: 50000)
     ]
     
     override func viewDidLoad() {
@@ -46,14 +49,11 @@ extension ListFoodViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("pressed")
-//        let controller = FoodDetailViewController.instantiate()
-//        navigationController?.pushViewController(controller, animated: true)
-        
+        //print("pressed")
+        //let controller = FoodDetailViewController.instantiate()
+        //navigationController?.pushViewController(controller, animated: true)
+        //navigationController?.present(controller, animated: true, completion: nil)
         let controller = storyboard? .instantiateViewController(withIdentifier: "FoodDetailViewController") as! UIViewController; controller.modalPresentationStyle = .fullScreen
                     present(controller, animated: true, completion: nil)
-        
-        
-        //controller.food = foods[indexPath.row].self
     }
 }
