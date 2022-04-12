@@ -16,7 +16,7 @@ class Onboarding3ViewController: UIViewController {
     }
     
     @IBAction func nextButtonClicked(_ sender: UIButton) {
-        let controller = storyboard? .instantiateViewController(withIdentifier: "FoodList") as! UITabBarController; controller.modalPresentationStyle = .fullScreen
+        let controller = storyboard? .instantiateViewController(withIdentifier: "FoodList") as! UITabBarController; controller.modalPresentationStyle = .custom
         
         present(controller, animated: true, completion: nil)
     }

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct Food {
-    let id, name, description: String?
-    let price: Int?
+    let id, name, description, price: String?
+    //let price: Int?
+    let image: UIImage
 }

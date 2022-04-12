@@ -9,35 +9,28 @@ import UIKit
 
 class Onboarding1ViewController: UIViewController {
 
-    @IBOutlet var userName: UITextField!
-    
-    static let userDF = UserDefaults.standard
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    
-    
     // next page button
-    @IBAction func nextButtonClicked(_ sender: Any) {
+    @IBAction func nextButtonClicked(_ sender: UIButton) {
+        let controller = storyboard? .instantiateViewController(identifier: "VeganNC") as! UINavigationController
+        controller.modalPresentationStyle = .fullScreen
         
-        let inputValue = userName.text
-        
-        if let valueExist = inputValue.self {
-            Onboarding1ViewController.userDF.set(inputValue, forKey: "name")
-            print(Onboarding1ViewController.userDF.dictionaryRepresentation())
-            let controller = storyboard? .instantiateViewController(identifier: "VeganNC") as! UINavigationController
-            controller.modalPresentationStyle = .fullScreen
-            
-            present(controller, animated: true, completion: nil)
-        }
-        else {
-            print("masukkan dulu")
-        }
+        present(controller, animated: true, completion: nil)
     }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
